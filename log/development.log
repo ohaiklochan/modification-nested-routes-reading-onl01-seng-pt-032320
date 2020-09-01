@@ -4029,3 +4029,27 @@ Processing by AuthorsController#show as HTML
   Rendering authors/show.html.erb within layouts/application
   [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
   Rendered authors/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 36ms (Views: 24.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/authors/4/posts/new" for 185.209.177.52 at 2020-09-01 22:07:51 +0000
+Cannot render console from 185.209.177.52! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.7ms)
+  Rendered posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 185.209.177.52 at 2020-09-01 22:07:58 +0000
+Cannot render console from 185.209.177.52! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4a5dSvATq8IInmSnT4TUjA3PisyR8eASu2yLIhGVqfYGfqbFRxCScg+jI3Wttp0ptGlcbBOBIXkxce9fEyYIQ==", "post"=>{"author_id"=>"4", "title"=>"random", "description"=>"yeah"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Random"], ["description", "yeah"], ["created_at", "2020-09-01 22:07:58.845581"], ["updated_at", "2020-09-01 22:07:58.845581"], ["author_id", 4]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.60.187:37838/posts/18
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+

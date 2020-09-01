@@ -3908,3 +3908,13 @@ Processing by AuthorsController#show as HTML
 Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/authors/4/posts/new" for 185.209.177.52 at 2020-09-01 21:57:20 +0000
+Cannot render console from 185.209.177.52! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (22.9ms)
+  Rendered posts/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
